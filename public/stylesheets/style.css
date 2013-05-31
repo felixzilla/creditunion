@@ -1,0 +1,65 @@
+body {
+  font: 14px Tahoma, Helvetica, Arial, sans-serif;
+  background-color: #f5f5f5;
+}
+
+.cu-font{
+	font-size: 14px;
+}
+
+.cu-font13{
+	font-size: 13px;
+}
+
+.cu-bold{
+	font-weight: bold;
+}
+.cu-padding{
+	padding-top: 10px;
+}
+
+.cu-height30{
+	height: 30px;
+}
+
+.cu-margin-bottom{
+	margin-bottom: 30px;
+}
+
+.cu-padding-left{
+	padding-left: 12px;
+}
+
+.cu-btn-size{
+	width: 220px;
+}
+
+.cu-label{
+    float: left;
+    width: 100px;
+}
+
+.cu-color{
+	color: #666;
+}
+
+.cu-align-right{
+	text-align: right;
+}
+
+.cu-align-left{
+	text-align: left;
+}
+
+.cu-control-label{
+    padding: 3px 0px 3px 5px;
+    text-align: left;
+	width: 213px;
+	border: 1px solid #999;
+	border-radius: 4px;
+}
+
+.cu-chat{
+	padding: 5px;
+	height: inherit;
+}

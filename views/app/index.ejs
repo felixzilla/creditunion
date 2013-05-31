@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html ng-app="app">
+  <head>
+    <title><%= title %></title>
+	<link rel="stylesheet" href="/stylesheets/bootstrap/css/bootstrap.min.css" charset="utf-8">
+	<link rel="stylesheet" href="/stylesheets/style.css" charset="utf-8">
+	
+	<style type="text/css" media="screen">
+	body{
+		background-color: #f5f5f5;
+		padding-top: 60px;
+	}
+	</style>
+  </head>
+  <body ng-controller="AppController">
+	  
+	  <!-- Top Bar -->
+	  <div class="navbar navbar-fixed-top">
+		  <div class="navbar-inner">
+			  <div class="container">
+				  <a href="#/" class="brand">Mizpah Credit Union</a>
+				  <form class="navbar-form navbar-search form-search">
+					  <div class="input-append dropdown">
+					  	<input id="topsearch" ng-model="search" type="text" class="span5 search-query" placeholder="Search for Account" />
+						<button type="submit" ng-click="searchAccount()" class="btn">Search</button>
+					  </div>
+				  </form>
+				  <div class="pull-right" style="padding-top: 15px;">
+					  
+					  <a href="" id="userinfo" ><i class="icon-user"></i></a>
+					  <span>{{ user.username }}</span>
+					  <a href="/logout"><i class="icon-circle-arrow-down"></i></a>
+				  </div>
+			  </div>
+		  </div>
+	  	
+	  </div>
+	  <!-- End of Top Bar -->
+	
+	  <!-- Alert -->
+	  <div class="container pagination-centered ">
+		  <div class="alert alert-info"> <!-- add class hide when form loads -->
+			  <button type="button" class="close" data-dismiss="alert">&times;</button>
+			  <span>Account Found</span>
+		  </div>
+	  </div>
+	  <!-- End of Alert -->
+	  
+	  <!-- Main Container -->
+	  <div class="container">
+		  <div class="row">
+			  
+			  <!-- Left Pane -->
+			  <div class="span3">
+				  <!-- Account Mini Details -->
+				  <div ng-show="show">
+					  <ul class="nav cu-padding-left cu-font cu-color">
+					 	<li>
+							<a href="#/show_account?id={{account.accountid}}" style="display: inline-block;">
+					 			<img src="/images/noavatar92.png" width="92px" height="92px">
+					 		</a>
+						</li>
+						<li class="nav-header"><a href="#/show_account?id={{account.accountid}}" style="margin-left: -15px;">show</a></li>
+					  	<li>{{account.firstname + ' ' + account.lastname}}</li>
+						<li>{{account.address1}}</li>
+						<li>{{account.phone}}</li>
+					  </ul>
+					  
+					  <ul class="nav nav-pills nav-stacked cu-font cu-bold">
+						<li class="nav-header"><i class="icon-tasks"></i>&nbsp;&nbsp;task</li>
+					  	<li><a href="#/withdraw">Withdrawal</a></li>
+						<li><a href="#/deposite">Deposite</a></li>
+					  </ul>
+					  
+				  </div>
+				  
+				  
+				  <ul class="nav nav-pills nav-stacked cu-font cu-bold">
+					<li class="nav-header"><i class="icon-briefcase"></i>&nbsp;&nbsp;apps</li>
+				  	<li><a href="#/loan">Loan Wizard</a></li>
+					<li><a href="#/new_account">New Account</a></li>
+				  </ul>
+				  
+			  </div>
+		      <!-- Right Pane -->
+			  <div class="span9">
+				  <div ng-view>
+				  	
+				  </div>
+			  </div>
+		  </div>
+	  </div>
+	  <!-- Main Container -->
+	  
+	  <!-- Footer -->
+	  <div class="navbar navbar-fixed-bottom  cu-height30">
+		  <div class="navbar-inner">
+			  <div class="container">
+				  <div class="pull-left cu-font cu-padding">
+					  <span>Copyright &copy; 2013, Mizpah Credit Union</span>
+				  </div>
+				  
+				  <div class="pull-right">
+					  
+				  </div>
+			  </div>
+		  </div>
+	  </div>
+	<!-- Scripts Include -->
+	<script src="/javascripts/lib/jquery-1.9.1.js" charset="utf-8"></script>
+	<script src="/javascripts/lib/jquery-ui.js" charset="utf-8"></script>
+	
+	<script src="/stylesheets/bootstrap/js/bootstrap.min.js" charset="utf-8"></script>
+	
+	<script src="/javascripts/lib/angular.js" charset="utf-8"></script>
+	<script src="/javascripts/lib/angular-resource.js" charset="utf-8"></script>
+	
+	<script src="/javascripts/app/js/app.js" type="text/javascript" charset="utf-8"></script>
+	
+	<!-- End of Scripts Include -->
+  </body>
+</html>

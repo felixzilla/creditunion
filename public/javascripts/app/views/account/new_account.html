@@ -1,0 +1,121 @@
+
+<form class="form-horizontal well" ng-submit="save()">
+	
+	<fieldset id="" class="">
+		<legend>Personal Details</legend>
+		
+		<div class="control-group">
+			<label class="control-label" for="firstName">First Name</label>
+			<div class="controls">
+				<input ng-model="account.firstName" type="text" id="firstName" placeholder="John" required />
+			</div>
+		</div>
+	
+		<div class="control-group">
+			<label class="control-label" for="lastName">Last Name</label>
+			<div class="controls">
+				<input ng-model="account.lastName" type="text" id="lastName" placeholder="Smith" required />
+			</div>
+		</div>
+	
+		<div class="control-group">
+			<label class="control-label" for="address1">Address Line 1</label>
+			<div class="controls">
+				<input ng-model="account.address1" type="text" id="address1" placeholder="Box 34..." required />
+			</div>
+		</div>
+	
+		<div class="control-group">
+			<label class="control-label" for="address2">Address Line 2</label>
+			<div class="controls">
+				<input ng-model="account.address2" type="text" id="address2" placeholder="Box 35...">
+			</div>
+		</div>
+	
+		<div class="control-group">
+			<label class="control-label" for="phone">Phone</label>
+			<div class="controls">
+				<input  ng-model="account.phone" type="text" id="phone" placeholder="0203489450" required />
+			</div>
+		</div>
+	
+		<div class="control-group">
+			<label class="control-label" for="email">Email</label>
+			<div class="controls">
+				<input  ng-model="account.email" type="email" id="email" placeholder="john@smith.com">
+			</div>
+		</div>
+		
+		<div class="control-group">
+			<label class="control-label" for="fileUpload">Photo</label>
+			<div class="controls">
+				<input  ng-model="account.fileUpload" type="file" id="fileUpload" >
+			</div>
+		</div>
+	
+	</fieldset>
+	
+	<fieldset id="" class="">
+		<legend>Next of Kin</legend>
+		
+		<div class="control-group">
+			<label class="control-label" for="nkfullName">Next of Kin Full Name</label>
+			<div class="controls">
+				<input  ng-model="account.nextFullName" type="text" id="nkfullName" placeholder="Jane Smith" required />
+			</div>
+		</div>
+		
+		<div class="control-group">
+			<label class="control-label" for="nkaddress">Next of Kin Address</label>
+			<div class="controls">
+				<input ng-model="account.nextAddress" type="text" id="nkaddress" placeholder="Box 36.." required />
+			</div>
+		</div>
+		
+		<div class="control-group">
+			<label class="control-label" for="nkphone">Next of Kin Phone</label>
+			<div class="controls">
+				<input ng-model="account.nextPhone" type="text" id="nkphone" placeholder="0203489451" required />
+			</div>
+		</div>
+		
+	</fieldset>
+	
+	<fieldset id="" class="">
+		<legend>Account Details</legend>
+		
+		<div class="control-group">
+			<label class="control-label" for="accountType">Account Type</label>
+			<div class="controls">
+				<select ng-model="account.accountType">
+					<option value="Susu">Susu</option>
+					<option value="Savings">Savings</option>
+					<option value="Deposite">Deposite</option>
+				</select>
+			</div>
+		</div>
+		
+		<div class="control-group">
+			<label class="control-label" for="initialDeposite">Initial Deposite GH&#162;</label>
+			<div class="controls">
+				<input ng-model="account.initialDeposite" type="text" id="initialDeposite" placeholder="0.00" required />
+			</div>
+		</div>
+		
+	</fieldset>
+	
+	<fieldset id="" class="">
+		<legend></legend>
+		
+		<div class="control-group">
+			<div class="controls">
+				<button class="btn btn-primary cu-btn-size">Save</button>
+			</div>
+		</div>
+	</fieldset>
+	
+	
+</form>
+<div class="clearfix cu-margin-bottom">
+	
+</div>

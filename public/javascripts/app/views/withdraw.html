@@ -1,0 +1,52 @@
+
+<form class="form-horizontal well" ng-submit="save()" >
+	
+	<fieldset id="" class="">
+		<legend>Deposite Details</legend>
+		
+		<div class="control-group">
+			<label class="control-label" for="accountId">Account Number</label>
+			<div class="controls">
+				<label class="cu-control-label">{{ account.accountid }}</label>
+			</div>
+		</div>
+	
+		<div class="control-group">
+			<label class="control-label" for="accountId">Account Name</label>
+			<div class="controls">
+				<label class="cu-control-label">{{ account.firstname + ' ' + account.lastname }}</label>
+			</div>
+		</div>
+		
+		<div class="control-group">
+			<label class="control-label" for="accountId">Withdraw Date</label>
+			<div class="controls">
+				<label class="cu-control-label">{{ withdrawDate }}</label>
+			</div>
+		</div>
+		
+		
+		<div class="control-group">
+			<label class="control-label" for="withdraw">Withdraw Amount</label>
+			<div class="controls">
+				<input ng-model="account.withdraw" type="text" name="withdraw" id="withdraw" placeholder="0.00" required />
+			</div>
+		</div>
+	</fieldset>
+	
+	
+	<fieldset id="" class="">
+		<legend></legend>
+		
+		<div class="control-group">
+			<div class="controls">
+				<button class="btn btn-primary cu-btn-size">Save</button>
+			</div>
+		</div>
+	</fieldset>
+	
+	
+</form>
+<div class="clearfix cu-margin-bottom">
+	
+</div>

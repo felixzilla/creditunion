@@ -1,0 +1,160 @@
+<div class="">
+	<form class="form-horizontal well" ng-submit="save()">
+	
+		<fieldset id="" class="">
+			<legend>Personal Details</legend>
+		
+			<div class="control-group">
+				<label class="control-label" for="firstname">First Name</label>
+				<div class="controls">
+					<input ng-model="account.firstname" type="text" id="firstname" placeholder="John" required />
+				</div>
+			</div>
+	
+			<div class="control-group">
+				<label class="control-label" for="lastname">Last Name</label>
+				<div class="controls">
+					<input ng-model="account.lastname" type="text" id="lastname" placeholder="Smith" required />
+				</div>
+			</div>
+	
+			<div class="control-group">
+				<label class="control-label" for="address">Address</label>
+				<div class="controls">
+					<input ng-model="account.address" type="text" id="address" placeholder="Box 34..." required />
+				</div>
+			</div>
+	
+			<div class="control-group">
+				<label class="control-label" for="employer">Employer</label>
+				<div class="controls">
+					<input ng-model="account.employer" type="text" id="employer" placeholder="Some Company Ltd">
+				</div>
+			</div>
+	
+			<div class="control-group">
+				<label class="control-label" for="hphone">Home Phone</label>
+				<div class="controls">
+					<input  ng-model="account.hphone" type="text" id="hphone" placeholder="0203489450"/>
+				</div>
+			</div>
+	
+			<div class="control-group">
+				<label class="control-label" for="mphone">Mobile Phone</label>
+				<div class="controls">
+					<input  ng-model="account.mphone" type="text" id="mphone" placeholder="0203489450"/>
+				</div>
+			</div>
+			
+			<div class="control-group">
+				<label class="control-label" for="email">Email</label>
+				<div class="controls">
+					<input  ng-model="account.email" type="email" id="email" placeholder="john@smith.com">
+				</div>
+			</div>
+	
+		</fieldset>
+	
+		<fieldset id="" class="">
+			<legend>Purpose Of Loan (tick as appropriate)</legend>
+
+			<div class="control-group">
+				<label class="control-label" for="provident">Provident</label>
+				<div class="controls">
+					<select name="provident" ng-model="account.provident">
+						<option value="Food">Food</option>
+						<option value="School">School Fees</option>
+						<option value="Medical">Medical</option>
+						<option value="Wedding">Wedding</option>
+						<option value="Funeral">Funeral</option>
+						<option value="Housing">Housing</option>
+						<option value="Transport">Transport</option>
+					</select>
+				</div>
+			</div>
+			
+			<div class="control-group">
+				<label class="control-label" for="agriculture">Agriculture</label>
+				<div class="controls">
+					<select name="agriculture" ng-model="account.agriculture">
+						<option value="Fertilizer">Fertilizer</option>
+						<option value="Livestock/Poultry">Livestock/Poultry</option>
+						<option value="Farming Equipment">Farming Equipment</option>
+						<option value="Seed">Farming Equipment</option>
+					</select>
+				</div>
+			</div>
+			
+			<div class="control-group">
+				<label class="control-label" for="business">Business</label>
+				<div class="controls">
+					<select name="business" ng-model="account.business">
+						<option value="Tailoring">Tailoring</option>
+						<option value="Maize Mill">Maize Mill</option>
+						<option value="Business Capital">Business Capital</option>
+						<option value="Liquidity Support">Liquidity Support</option>
+					</select>
+				</div>
+			</div>
+		
+		</fieldset>
+	
+		<fieldset id="" class="">
+			<legend>Loan Details</legend>
+		
+			<div class="control-group">
+				<label class="control-label" for="loan">Loan Amount GH&#162;</label>
+				<div class="controls">
+					<input name="loan" ng-model="account.loan" type="text" id="initialDeposite" placeholder="0.00" required />
+				</div>
+			</div>
+		
+			<div class="control-group">
+				<label class="control-label" for="loanperiod">Loan Period (in years)</label>
+				<div class="controls">
+					<input ng-model="account.loanperiod" name="loanperiod" type="number" id="loanperiod" placeholder="0.00" required />
+				</div>
+			</div>
+			
+			<div class="control-group">
+				<label class="control-label" for="loanpayment">Loan Payment Date</label>
+				<div class="controls">
+					<input ng-model="account.loandate" name="loandate" type="date" id="loandateloandate" placeholder="0.00" required />
+				</div>
+			</div>
+			
+			<div class="control-group">
+				<label class="control-label" for="firstpayment">First Payment Date</label>
+				<div class="controls">
+					<input ng-model="account.firstpayment" name="firstpayment" type="date" id="firstpayment" placeholder="0.00" required />
+				</div>
+			</div>
+			
+			<div class="control-group">
+				<label class="control-label" for="guarantee">Guarantee Account No</label>
+				<div class="controls">
+					<select name="guarantee" ng-model="account.guarantee" required>
+						<option ng-repeat="account in accounts" value="{{account.accountid}}">{{account.accountid}}</option>
+					</select>
+				</div>
+			</div>
+		
+		</fieldset>
+	
+		<fieldset id="" class="">
+			<legend></legend>
+		
+			<div class="control-group">
+				<div class="controls">
+					<button class="btn btn-primary cu-btn-size">Submit Loan</button>
+				</div>
+			</div>
+		</fieldset>
+	
+	
+	</form>
+	<div class="clearfix cu-margin-bottom">
+	
+	</div>
+	
+</div>
