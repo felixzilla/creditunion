@@ -54,7 +54,7 @@
 						<td>{{ loan.firstname + " " +loan.lastname }}</td>
 						<td>{{ loan.loanamount }}</td>
 						<td>{{ loan.loanperiod }}</td>
-						<td>{{ loan.firstpaymentdate }}</td>
+						<td>{{ loan.firstpaymentdate | date:'mediumDate' }}</td>
 						<td><a href="#/loan/{{loan.loanid}}"><i class="icon-circle-arrow-right"></i></a></td>
 					</tr>
 				</tbody>
